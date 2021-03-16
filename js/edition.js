@@ -20,7 +20,7 @@ edition.fillSelectePharmacies = (pharmacies) => {
 edition.getPharmacies = () => {
   return jQuery
     .ajax({
-      url: `http://localhost:3000/api/pharmacies`,
+      url: `https://yvonapi.herokuapp.com/api/pharmacies`,
       method: "GET",
     })
     .catch((error) => {
@@ -157,7 +157,7 @@ edition.save = async (event) => {
   const isEdition = id.length > 0;
   const pharmacie_id = jQuery("#pharmacie").val();
   const nom = jQuery("#nom").val();
-  let url = `http://localhost:3000/api/drugs`;
+  let url = `https://yvonapi.herokuapp.com/api/drugs`;
 
   if (isEdition) {
     url += `/${id}`;
@@ -203,7 +203,7 @@ edition.saveP = async (event) => {
   const id = jQuery("#id").val();
   const isEdition = id.length > 0;
   const name = jQuery("#name").val();
-  let url = `http://localhost:3000/api/pharmacies`;
+  let url = `https://yvonapi.herokuapp.com/api/pharmacies`;
 
   if (isEdition) {
     url += `/${id}`;

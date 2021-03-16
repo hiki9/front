@@ -15,7 +15,7 @@ list.init = async () => {
 list.getDrugs = () => {
   return jQuery
     .ajax({
-      url: "http://localhost:3000/api/drugs",
+      url: "https://yvonapi.herokuapp.com/api/drugs",
       method: "GET",
     })
     .catch((error) => {
@@ -27,7 +27,7 @@ list.getDrugs = () => {
 list.getPharmacies = () => {
   return jQuery
     .ajax({
-      url: "http://localhost:3000/api/pharmacies",
+      url: "https://yvonapi.herokuapp.com/api/pharmacies",
       method: "GET",
     })
     .catch((error) => {
@@ -52,7 +52,7 @@ list.remove = async () => {
   const drugId = list.drugToRemove;
   try {
     await jQuery.ajax({
-      url: `http://localhost:3000/api/drugs/${drugId}`,
+      url: `https://yvonapi.herokuapp.com/api/drugs/${drugId}`,
       method: "DELETE",
     });
     jQuery(`[data-id="${drugId}"]`).fadeOut("slow");
@@ -68,7 +68,7 @@ list.removeP = async () => {
   const pharmacieId = list.pharmacieToRemove;
   try {
     await jQuery.ajax({
-      url: `http://localhost:3000/api/pharmacies/${pharmacieId}`,
+      url: `https://yvonapi.herokuapp.com/api/pharmacies/${pharmacieId}`,
       method: "DELETE",
     });
     jQuery(`[data-id="${pharmacieId}"]`).fadeOut("slow");
