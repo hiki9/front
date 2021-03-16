@@ -52,3 +52,4 @@ gulp.task("serve", (cb) => {
 
 
 gulp.task('dev', gulp.series('vendor-css', 'vendor-js', 'app-js', 'serve'));
+gulp.task('prod', gulp.series('vendor-css', 'vendor-js', 'app-js'));
