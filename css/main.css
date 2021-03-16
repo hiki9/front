@@ -1,0 +1,21 @@
+  
+#button-cancel-edit,
+#container-form, #container-form1, #container-formP , #container-formPg {
+    display: none;
+}
+
+#alert-error-music, .error-msg {
+    display: none;
+}
+
+#anim1:hover {
+    background-color: rgb(182, 211, 195) ;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#anim:hover {
+    background-color: rgb(182, 211, 195) ;
+    font-weight: bold;
+    text-transform: uppercase;
+}
